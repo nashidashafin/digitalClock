@@ -3,14 +3,19 @@
 *{
     margin: 0;
     padding: 0;
+    margin-right:0 ;
     box-sizing: border-box;
     font-family: "Orbitron", sans-serif;
     transition: all 0.4s ease;
 }
-section{
-    min-height: 100vh;
-    width: 100%;
+body{
+    overflow-x: hidden;
     background: aliceblue;
+}
+section{
+    height: 100vh;
+    width: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,10 +23,11 @@ section{
 }
 @media(max-width:567px){
     section{
-        width: 550px;
-        /* min-height: 200vh; */
+        padding: 0 10px;
     }
 }
+
+
 
 section.dark{
     background-color: #24292d ;
@@ -41,9 +47,21 @@ section .container {
     border-radius: 10px;
     position: relative;
 }
-@media(max-width:576px){
-    section .container{
-        max-width: 450px;
+@media (max-width: 576px) {
+    section .container {
+        height: 100px;
+        /* width:220px */
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media(max-width:530px){
+    section{
+        display: flex;
+    align-items: center;
+    justify-content: center;
     }
 }
 section.dark .container{
@@ -81,6 +99,7 @@ section.dark .container .icons i.fa-sun{
 section .container .time{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .container .time .time-colon{
     display: flex;
@@ -101,6 +120,7 @@ section .container .time{
 @media(max-width:572px){
     .container .time .time-colon .time-text{
         width: 80px;
+        height: 80px;
     }
 }
 
