@@ -51,7 +51,7 @@ section .container {
     section .container {
         height: 100px;
         /* width:220px */
-        min-height: 100%;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -82,6 +82,17 @@ section .container .icons i{
     font-size: 14px;
     cursor: pointer;
 }
+/* @media (max-width: 576px) {
+    section.dark .container .icons i{
+        /* height: 100px; */
+        /* width:220px */
+        /* min-height: 100%; */ 
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+    }
+} */
 section.dark .container .icons i{
     background: #fff;
     color: #323840;
@@ -147,8 +158,15 @@ section.dark .time .time-colon .time-text , section.dark .time .time-colon .colo
     font-weight: 700;
     letter-spacing: 2px;
 }
+
 section.dark .time .time-colon .amPm{
     color: #fff;
+}
+@media(max-width:572px){
+    .time .time-colon .amPm{
+        font-size: 10px;
+        right: -28px;
+    }
 }
 
 .time .time-colon .time-text .text{
